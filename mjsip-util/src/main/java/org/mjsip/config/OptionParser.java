@@ -94,6 +94,7 @@ public class OptionParser {
 				}
 			} else if (defaultConfigFile != null) {
 				String fileName = System.getProperty("user.home") + File.pathSeparator + defaultConfigFile;
+				fileName = System.getProperty("user.home") + File.separator + defaultConfigFile;
 				file = new File(fileName);
 				if (!file.exists()) {
 					file = null;

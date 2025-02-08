@@ -131,7 +131,7 @@
 # Via IP address or fully-qualified domanin name (FQDN).
 # Use 'AUTO-CONFIGURATION' for auto detection (or let it undefined).
 # Default value: via_addr=AUTO-CONFIGURATION
-#via_addr=192.168.0.33
+via_addr=10.106.63.245
 
 # Local SIP port.
 # Default value: host_port=5060
@@ -311,11 +311,11 @@
 
 # Display name for the user.
 # It is used in the user's AOR registered to the registrar server and used as From URL.
-#display_name=Alice
+display_name=2015
 
 # User's name.
 # It is used to build the user's AOR registered to the registrar server and used as From URL.
-#user=alice
+user=2015
 
 # Fully qualified domain name (or address) of the proxy server.
 # It is part of the user's AOR registered to the registrar server and used as From URL.
@@ -327,7 +327,7 @@
 # It is used as recipient for REGISTER requests.
 # If 'registrar' is not defined, the 'proxy' value is used in its place.
 # If 'proxy' is not defined, the 'registrar' value is used in its place.
-#registrar=example.net
+registrar=10.106.63.245
 
 # Contact URL.
 # If not defined (default), it is formed as sip:user@via_addr:host_port.
@@ -335,13 +335,13 @@
 #contact_url=sip:alice@192.168.0.55:5070
 
 # User's name used for server authentication.
-#auth_user=alice
+auth_user=2015
 
 # User's realm used for server authentication.
-#auth_realm=example.net
+auth_realm=asterisk
 
 # User's passwd used for server authentication.
-#auth_passwd=mypassword
+auth_passwd=2015
 
 # Absolute path (or complete URL) of the jar archive, where various UA media (gif, wav, etc.) are stored.
 # Use value 'NONE' for getting resources from external folders.
@@ -362,7 +362,7 @@
 
 # Whether registering with the registrar server.
 # Default value: do_register=no
-#do_register=yes
+do_register=yes
 
 # Whether unregistering the contact address.
 # Default value: do_unregister=no
@@ -419,11 +419,11 @@
 
 # No offer in the invite.
 # Default value: no_offer=no
-#no_offer=yes
+# no_offer=yes
 
 # Whether using audio.
 # Default value: audio=no
-#audio=yes
+audio=yes
 
 # Whether using video.
 # Default value: video=no
@@ -483,6 +483,7 @@
 #media_spec=audio 0 PCMU 8000 160
 #media=video 4002 rtp/avp
 #media_spec=video 101
+media=audio 12858 RTP/AVP 0 101 {0 PCMU 8000 160, 8 PCMA 8000 160}
 
 # Whether using JMF for audio streaming.
 # Default value: use_jmf_audio=no

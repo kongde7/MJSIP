@@ -460,7 +460,7 @@ public class UserAgentCli implements UserAgentListenerAdapter {
 		UIConfig uiConfig = new UIConfig();
 		ServiceConfig serviceConfig = new ServiceConfig();
 
-		OptionParser.parseOptions(args, ".mjsip-ua", sipConfig, uaConfig, schedulerConfig, mediaConfig, portConfig, uiConfig, serviceConfig);
+		OptionParser.parseOptions(args, "mjsip.cfg.txt", sipConfig, uaConfig, schedulerConfig, mediaConfig, portConfig, uiConfig, serviceConfig);
 		
 		sipConfig.normalize();
 		uaConfig.normalize(sipConfig);

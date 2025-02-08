@@ -110,8 +110,8 @@ public class UserAgentGui extends JFrame implements UserAgentListenerAdapter {
 	protected StringList buddy_list;
 
 	private static final int W_Width=320; // window width
-	private static final int W_Height=90; // window height
-	private static final int C_Height=30; // buttons and combobox height (total)
+	private static final int W_Height=390; // window height
+	private static final int C_Height=250; // buttons and combobox height (total)
 
 	/** Media file path */
 	//final String MEDIA_PATH="media/media/org/mjsip/ua/";
@@ -716,7 +716,7 @@ public class UserAgentGui extends JFrame implements UserAgentListenerAdapter {
 		PortConfig portConfig = new PortConfig();
 		UIConfig uiConfig = new UIConfig();
 
-		OptionParser.parseOptions(args, ".mjsip-ua", sipConfig, uaConfig, schedulerConfig, mediaConfig, portConfig, uiConfig);
+		OptionParser.parseOptions(args, "mjsip.cfg.txt", sipConfig, uaConfig, schedulerConfig, mediaConfig, portConfig, uiConfig);
 		
 		sipConfig.normalize();
 		uaConfig.normalize(sipConfig);
